@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+
+.hero{
+    min-width: 300px;
+    
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+nav .logo{
+    width: 80px;
+   
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left:40px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+nav.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: gray;
+    
+}
+
+nav.active a{
+    color:white;
+}
+
+/* Existing styles for navbar */
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* Existing styles */
+
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+display: none;
+    }
+
+.content{
+    text-align:center ;
+    
+}
+
+.content  h1{
+    font-size: 80px;
+    color: #fff;
+    font-weight: 600;    
+}
+
+.content a{
+     text-decoration: none;
+     display:inline-block;
+     color: #fff;
+     border:2px solid #fff;
+     padding: 14px 70px;
+     border-radius: 50px;
+     margin-top: 20px;
+
+}
+
+body{
+    background: url(image/video.mp4);
+    width: 100%;
+    height: auto;
+    /* max-aspect-ratio:16/9; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+.back-video video{
+    width: 100%;
+}
+.actives{
+    left: 0;
+}
+
+@media screen and (max-width:768px){
+     .content h1{
+        font-size: 40px;
+        color:red;
+     }     
+}
+
+@media  screen and (min-width:412px) {
+.content{
+    font-size: 20px;
+    padding-top: 90px;
+}
+.content h1{
+    font-size: 45px;
+}
+.back-video{
+    width: 87%;
+
+}
+    
+}
+/* @media screen and (min-aspect-ratio:16/9){
+.back-video{
+    width: 100%; 
+    height: auto;
+}
+}  */
+
+@media (max-aspect-ratio:16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+    }
+
+    @media screen and (max-width:930px) {
+        .checkbtn{
+        display: block;
+        }
+
+        nav .logo{
+            width:50px;
+        }
+    nav{
+        background:gray;
+        height: 80px;
+    }
+
+#hero{
+    height:95vh;
+    margin-bottom:95vh;
+}
+.back-video{
+    bottom: -80px;
+}
+
+/* .back-video{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    height: 100% ;
+} */
+
+    nav ul li {
+        font-size:16px;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+}
+
+nav ul li{
+    display: block;
+    margin-block: 40px;
+}
+
+nav ul li a{
+    font-size: 20px;
+}
+nav ul li a:hover{
+    background: none;
+    color:#0082e6;
+}
+#check:checked ~ ul{
+    left: 0;
+
+}
+    }
+/* CSS for landscape orientation
+@media screen and (orientation: landscape) {
+    .back-video {
+      width: 100%;
+      height: auto;
+    }
+  } */  
